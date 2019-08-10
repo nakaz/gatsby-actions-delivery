@@ -1,12 +1,8 @@
-action "Hello World" {
-  uses = "./hello-world/"
-}
-
-workflow "New workflow" {
+workflow "Announce a Push" {
   on = "push"
-  resolves = ["Hello World-1"]
+  resolves = ["Hello World"]
 }
 
-action "Hello World-1" {
+action "Hello World" {
   uses = "./.github/hello-world"
 }
